@@ -1,7 +1,10 @@
-load_dotenv
-find_dotenv
+langchain_community
+langchain
+langchain_openai
 wordcloud 
 OpenAI
+setuptools
+python-dotenv
 matplotlib
 acme==1.21.0
 attrs==21.2.0
