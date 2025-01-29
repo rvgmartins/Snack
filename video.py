@@ -22,8 +22,9 @@ OUTPUT_VIDEO = "output_video.mp4"
 
 
 def get_audio_length(audio_bytes):
-    audio = AudioSegment.from_file(io.BytesIO(audio_bytes), format="mp3")
-    length_ms = len(audio)
+    #audio = AudioSegment.from_file(io.BytesIO(audio_bytes), format="mp3")
+    #length_ms = len(audio)
+    length_ms  = 100000
     length_seconds = length_ms / 1000  # Convert milliseconds to seconds
     return length_seconds
 
@@ -187,24 +188,24 @@ def main(platform):
     )
 
     # Add voice over to video
-    subprocess.run(
-        [
-            "ffmpeg",
-            "-y",  # Overwrite existing output file
-            "-i",
-            INPUT_VIDEO,
-            "-i",
-            "video.mp3",
-            "-c:v",
-            "copy",
-            "-c:a",
-            "aac",
-            "-strict",
-            "experimental",
-            "-map",
-            "0:v:0",
-            "-map",
-            "1:a:0",
-            OUTPUT_VIDEO,
-        ]
-    )
+    # subprocess.run(
+    #     [
+    #         "ffmpeg",
+    #         "-y",  # Overwrite existing output file
+    #         "-i",
+    #         INPUT_VIDEO,
+    #         "-i",
+    #         "video.mp3",
+    #         "-c:v",
+    #         "copy",
+    #         "-c:a",
+    #         "aac",
+    #         "-strict",
+    #         "experimental",
+    #         "-map",
+    #         "0:v:0",
+    #         "-map",
+    #         "1:a:0",
+    #         OUTPUT_VIDEO,
+    #     ]
+    # )
