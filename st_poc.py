@@ -1033,10 +1033,10 @@ if st.session_state["current_campaign_step"] == "Step 6: Content Production":
 
             csv_text = convert_text_to_csv(response)
             transform_text_to_csv(csv_text)
-
+            print(platform)    
             video_main(platform)  # TODO: improve how we use stuff from `video.py`
             # video_zoomout_main()  # TODO: improve how we use stuff from `video_zoomout.py`
-            video_images_main(platform)  # TODO: improve how we use stuff from `video_zoomout.py`
+            #video_images_main(platform)  # TODO: improve how we use stuff from `video_zoomout.py`
 
         move_to_step_7()
 
