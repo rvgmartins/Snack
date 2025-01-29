@@ -106,24 +106,24 @@ def main(platform):
     final_clip.write_videofile("video_images.mp4", fps=24)
 
     # Add voice over to video
-    subprocess.run(
-        [
-            "ffmpeg",
-            "-y",  # Overwrite existing output file
-            "-i",
-            "video_images.mp4",
-            "-i",
-            "video_images.mp3",
-            "-c:v",
-            "copy",
-            "-c:a",
-            "aac",
-            "-strict",
-            "experimental",
-            "-map",
-            "0:v:0",
-            "-map",
-            "1:a:0",
-            "output_video_images.mp4",
-        ]
-    )
+    # subprocess.run(
+    #     [
+    #         "ffmpeg",
+    #         "-y",  # Overwrite existing output file
+    #         "-i",
+    #         "video_images.mp4",
+    #         "-i",
+    #         "video_images.mp3",
+    #         "-c:v",
+    #         "copy",
+    #         "-c:a",
+    #         "aac",
+    #         "-strict",
+    #         "experimental",
+    #         "-map",
+    #         "0:v:0",
+    #         "-map",
+    #         "1:a:0",
+    #         "output_video_images.mp4",
+    #     ]
+    # )
